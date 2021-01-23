@@ -8,11 +8,19 @@ class State extends React.Component{
             PHP : 'PHP is a dynamic language'
         }
     }
+
+    changeLanguage = () => {
+        this.setState({
+            react: 'React js create app in many components, component is a peace, reusable.'
+        })
+    }
     render(){
         return(
             <div>
                 <h1>{this.state.javascript}</h1>
                 <h1>{this.state.PHP}</h1>
+                <h1>{this.state.react}</h1>
+                <button type="button" onClick={this.changeLanguage}>Change Language</button>
             </div>
         )
     }
